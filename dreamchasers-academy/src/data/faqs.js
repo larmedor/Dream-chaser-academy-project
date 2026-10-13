@@ -1,0 +1,17 @@
+export const faqs = [
+  { question: "Who can participate in the Academy's programmes?", answer: 'Our programmes are primarily designed for young people between the ages of 10 and 35. Participants can join regardless of their academic background or status.' },
+  { question: 'Do I need a particular academic qualification to participate?', answer: 'No. Our programmes are open to young people from different educational backgrounds. We focus on helping participants discover their gifts, develop relevant skills, and pursue their purpose.' },
+  { question: 'What does the Academy train people in?', answer: 'Our training covers areas including purpose and passion, goal setting, leadership, entrepreneurship, creativity, innovation, emotional intelligence, communication, teamwork, accountability, self-concept, vision actualization, and human development.' },
+  { question: 'Are the training sessions theoretical or practical?', answer: 'Both. Our training combines theoretical classroom lessons with practical, hands-on and field sessions.' },
+  { question: 'Are the programmes available online?', answer: 'Yes. Training may be delivered virtually or in person, depending on the programme.' },
+  { question: 'How long do the programmes last?', answer: 'Programme duration varies. For example, the Entrepreneurs Round Table is a six-week programme. Other programmes have their own schedules.' },
+  { question: 'Will I receive a certificate?', answer: 'Certification depends on the programme. The Entrepreneurs Round Table includes certification upon successful completion.' },
+  { question: 'How much do the programmes cost?', answer: 'Fees vary depending on the programme. Please contact us or visit the relevant programme page for current registration and fee information.' },
+  { question: 'How do I register?', answer: 'You can register through the registration option provided for the relevant programme or contact the Academy directly for guidance.' },
+  { question: 'Can I participate in more than one programme?', answer: 'Yes. Participants may explore multiple programmes where appropriate, particularly where they complement their personal, professional, or entrepreneurial development.' },
+  { question: 'Are the programmes suitable for beginners?', answer: 'Yes. Our programmes are designed to meet participants at different stages of their development, whether they are discovering their gifts, developing an existing talent, or exploring entrepreneurship.' },
+  { question: 'What makes the Academy different?', answer: 'We take a holistic approach to personal and entrepreneurial development. Beyond teaching technical knowledge, we help young people understand themselves, discover their gifts, develop their potential, establish meaningful goals, and pursue their purpose.' },
+  { question: 'Does the Academy only focus on entrepreneurship?', answer: 'No. Entrepreneurship is only one part of our work. We also focus on personal development, leadership, communication, creativity, emotional intelligence, purpose, teamwork, innovation, and vision actualization.' },
+  { question: 'How can I partner with or support the Academy?', answer: 'You can contact us to explore opportunities for partnership, sponsorship, collaboration, training, community initiatives, or other forms of support.' },
+  { question: 'How can I learn more?', answer: 'Explore our programmes and initiatives on the website or contact us directly. We will be happy to provide more information and help you identify the opportunity that best suits your needs.' },
+]

@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+	--font-serif: "Playfair Display", Georgia, serif;
+	--font-sans: "Inter", system-ui, sans-serif;
+	--color-ink: #000000;
+	--color-coal: #0A0A0A;
+	--color-smoke: #1A1A1A;
+	--color-fog: #555555;
+	--color-mist: #888888;
+	--color-line: #CCCCCC;
+	--color-bone: #F5F5F5;
+	--color-paper: #FAFAFA;
+}
+
+:root {
+	font-family: var(--font-sans);
+	color: var(--color-ink);
+	background: #FFFFFF;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-optical-sizing: auto;
+	font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	min-width: 320px;
+	scroll-behavior: smooth;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+	margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+	-webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+	outline: 2px solid #000000;
+	outline-offset: 3px;
+}
+
+::selection {
+	color: #FFFFFF;
+	background: #000000;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}

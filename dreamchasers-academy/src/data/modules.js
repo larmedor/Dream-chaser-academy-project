@@ -1,0 +1,17 @@
+export const trainingModules = [
+  'Bond System',
+  'Goal Setting',
+  'Creativity & Design Thinking',
+  'Leadership Development',
+  'Accountability',
+  'Emotional Intelligence',
+  'Teamwork',
+  'Entrepreneurship 101 & Business Profitability',
+  'Innovation',
+  'Human Development Strategies',
+  'Communication Skills',
+  'Vision Actualization',
+  'Purpose & Passion',
+  'Theory of Self-Concept',
+  'The Supernatural',
+]
