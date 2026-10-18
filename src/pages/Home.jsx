@@ -3,6 +3,7 @@ import { ArrowDown, ArrowRight, ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { easeOutQuint, fadeUp, fadeUpBlur, lineReveal, scaleIn, staggerContainer } from '../animations/variants'
+import founderPortrait from '../assets/images/Founder Awoyale Mattew.jpg'
 import CTABand from '../components/CTABand'
 import ImageSlot from '../components/ImageSlot'
 import ProgrammeCard from '../components/ProgrammeCard'
@@ -36,7 +37,7 @@ function HomeHero() {
           animate={{ scale: shouldReduceMotion ? 1 : 1.08 }}
           transition={{ duration: shouldReduceMotion ? 0 : 12, ease: 'linear' }}
         >
-          <ImageSlot src="" alt="Homepage hero image placeholder" slotName="HOME-HERO" aspect="auto" className="home-hero__image" />
+          <ImageSlot src="" alt="Dream Chasers Academy homepage hero" slotName="HOME-HERO" aspect="auto" className="home-hero__image" />
         </motion.div>
       </motion.div>
       <div className="home-hero__overlay" />
@@ -210,7 +211,7 @@ function HomePage() {
             whileInView={shouldReduceMotion ? undefined : 'visible'}
             viewport={{ once: true, margin: '-80px' }}
           >
-            <ImageSlot src="" alt="Portrait of Mr. Matthew Awoyale" slotName="FOUNDER-PORTRAIT" aspect="4 / 5" />
+            <ImageSlot src={founderPortrait} alt="Mr. Matthew Awoyale, Founder of Dream Chasers Academy" slotName="FOUNDER-PORTRAIT" aspect="4 / 5" />
             <span className="founder-section__image-index">FOUNDER · DREAM CHASERS ACADEMY</span>
           </motion.div>
           <motion.div
@@ -220,10 +221,12 @@ function HomePage() {
             whileInView={shouldReduceMotion ? undefined : 'visible'}
             viewport={{ once: true, margin: '-80px' }}
           >
-            <span className="section-kicker">04 — A Note from the Founder</span>
-            <h2>Purpose is the beginning of every great journey.</h2>
-            <p>Mr. Matthew Awoyale is a purpose-driven entrepreneur, mentor, and personal development advocate passionate about helping people discover their God-given gifts, maximize their potential, and fulfil their purpose. Through the Academy's training programmes, entrepreneurship initiatives, conferences, conversations, and community projects, he is committed to building a generation of purposeful, skilled, innovative, and impact-driven young people.</p>
-            <Link className="text-link" to="/about">Read Full Bio <ArrowUpRight size={17} aria-hidden="true" /></Link>
+            <span className="section-kicker">Meet the Founder</span>
+            <h2>Mr. Matthew Awoyale</h2>
+            <p className="founder-section__role">Founder, Dream Chasers Academy</p>
+            <blockquote className="founder-section__quote">“committed to building a generation of purposeful, skilled, innovative, and impact-driven young people”</blockquote>
+            <p>Mr. Matthew Awoyale is a purpose-driven entrepreneur, mentor, and personal development advocate passionate about helping people discover their God-given gifts, maximize their potential, and fulfil their purpose. Through the Academy's training programmes, entrepreneurship initiatives, conferences, conversations, and community projects, he is dedicated to helping young people turn their abilities into meaningful impact.</p>
+            <Link className="button-link button-link--outline" to="/about">Read Full Bio <ArrowRight size={17} aria-hidden="true" /></Link>
           </motion.div>
         </div>
       </section>

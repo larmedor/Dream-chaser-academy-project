@@ -542,8 +542,8 @@
 
 .site-footer__main {
   display: grid;
-  grid-template-columns: minmax(14rem, 1.6fr) repeat(3, minmax(8rem, 1fr));
-  gap: clamp(2rem, 5vw, 5rem);
+  grid-template-columns: minmax(14rem, 1.6fr) repeat(4, minmax(8rem, 1fr));
+  gap: clamp(1.5rem, 3vw, 3rem);
   width: min(100%, 90rem);
   margin: 0 auto;
   padding-bottom: 4rem;
@@ -604,6 +604,13 @@
   font-size: 0.8rem;
   line-height: 1.5;
   text-decoration: none;
+}
+
+.site-footer__link-column > span {
+  max-width: 14rem;
+  color: #555555;
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .site-footer__link-column > a:hover,
@@ -1140,14 +1147,15 @@
 }
 
 .founder-section {
-  background: #FFFFFF;
+  background: #000000;
+  color: #FFFFFF;
 }
 
 .founder-section__inner {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
-  gap: clamp(3rem, 8vw, 9rem);
+  gap: clamp(2.5rem, 6vw, 6rem);
 }
 
 .founder-section__image-wrap {
@@ -1155,8 +1163,9 @@
 }
 
 .founder-section__image-wrap .image-slot {
-  max-width: 35rem;
+  max-width: none;
   background: #1A1A1A;
+  aspect-ratio: 4 / 5;
 }
 
 .founder-section__image-index {
@@ -1168,11 +1177,47 @@
 }
 
 .founder-section__copy .section-kicker {
-  color: #555555;
+  color: #CCCCCC;
+  margin-bottom: 1rem;
 }
 
 .founder-section__copy h2 {
-  max-width: 12ch;
+  max-width: 10ch;
+  margin-bottom: 0.8rem;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1.02;
+}
+
+.founder-section__role {
+  margin: 0;
+  color: #CCCCCC;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.founder-section__quote {
+  max-width: 27ch;
+  margin: 1.8rem 0;
+  padding-left: 1.2rem;
+  border-left: 1px solid #888888;
+  font-family: var(--font-serif);
+  font-size: clamp(1.55rem, 2.4vw, 2.35rem);
+  font-style: italic;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
+}
+
+.founder-section__copy > p:not(.founder-section__role) {
+  max-width: 45rem;
+  margin: 0;
+  color: #CCCCCC;
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+
+.founder-section__copy .button-link {
+  margin-top: 1.8rem;
 }
 
 .inner-page {
@@ -1369,44 +1414,58 @@
 
 .founder-detail {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   align-items: center;
-  gap: clamp(3rem, 8vw, 8rem);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  background: #000000;
+  color: #FFFFFF;
 }
 
 .founder-detail__image .image-slot {
-  max-width: 33rem;
+  max-width: none;
+  aspect-ratio: 4 / 5;
 }
 
 .founder-detail__copy h2 {
-  margin: 0 0 1.2rem;
+  max-width: 10ch;
+  margin: 0 0 0.8rem;
   font-family: var(--font-serif);
-  font-size: clamp(2.6rem, 5vw, 5rem);
+  font-size: clamp(3rem, 6vw, 6rem);
   font-weight: 400;
   letter-spacing: -0.05em;
+  line-height: 1.02;
 }
 
 .founder-detail__copy > p {
   margin: 0;
-  color: #555555;
+  color: #CCCCCC;
   font-size: 0.95rem;
   line-height: 1.9;
 }
 
-.founder-detail__name {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  margin-top: 1.6rem !important;
-  color: #000000 !important;
+.founder-detail .section-kicker {
+  margin-bottom: 1rem;
+  color: #CCCCCC;
+}
+
+.founder-detail__role {
+  margin: 0 0 1.8rem !important;
+  color: #CCCCCC !important;
   font-size: 0.78rem !important;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.founder-detail__name span {
-  color: #555555;
-  font-size: 0.64rem;
+.founder-detail__quote {
+  max-width: 27ch;
+  margin: 0 0 1.8rem;
+  padding-left: 1.2rem;
+  border-left: 1px solid #888888;
+  font-family: var(--font-serif);
+  font-size: clamp(1.55rem, 2.4vw, 2.35rem);
+  font-style: italic;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
 }
 
 .serve-section {
@@ -2221,6 +2280,17 @@
   font-size: 0.8rem;
 }
 
+.contact-detail a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-detail a:hover,
+.contact-detail a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
 .contact-form-panel {
   padding: clamp(1.5rem, 4vw, 3rem);
   border: 1px solid #CCCCCC;
@@ -2428,7 +2498,7 @@
 
   .founder-detail__image .image-slot {
     max-width: none;
-    aspect-ratio: 4 / 3 !important;
+    aspect-ratio: 4 / 5 !important;
   }
 
   .serve-section {
@@ -2767,7 +2837,7 @@
 
   .founder-section__image-wrap .image-slot {
     max-width: none;
-    aspect-ratio: 4 / 3 !important;
+    aspect-ratio: 4 / 5 !important;
   }
 }
 

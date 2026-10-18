@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { staggerItem } from '../animations/variants'
 import ImageSlot from './ImageSlot'
 
-function ProgrammeCard({ title, description, to = '/programmes', image, slotName = 'PROGRAMME-IMAGE', staggered = false }) {
+function ProgrammeCard({ title, description, to = '/programmes', image, imageAlt, slotName = 'PROGRAMME-IMAGE', staggered = false }) {
   const shouldReduceMotion = useReducedMotion()
 
   return (
@@ -16,7 +16,7 @@ function ProgrammeCard({ title, description, to = '/programmes', image, slotName
       viewport={staggered ? undefined : { once: true, margin: '-60px' }}
     >
       <Link className="programme-card__link" to={to}>
-        <ImageSlot src={image} alt={title} slotName={slotName} aspect="1.28 / 1" />
+        <ImageSlot src={image} alt={imageAlt || title} slotName={slotName} aspect="1.28 / 1" />
         <div className="programme-card__body">
           <h3>{title}</h3>
           <p>{description}</p>

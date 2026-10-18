@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { fadeUp, scaleIn, staggerContainer, staggerItem } from '../animations/variants'
+import { fadeUp, fadeUpBlur, scaleIn, staggerContainer, staggerItem } from '../animations/variants'
+import founderPortrait from '../assets/images/Founder Awoyale Mattew.jpg'
 import CTABand from '../components/CTABand'
 import ImageSlot from '../components/ImageSlot'
 import SectionHeading from '../components/SectionHeading'
@@ -65,13 +66,14 @@ function AboutPage() {
 
       <section className="inner-section founder-detail">
         <motion.div className="founder-detail__image" variants={reduceMotion ? undefined : scaleIn} initial={reduceMotion ? false : 'hidden'} whileInView={reduceMotion ? undefined : 'visible'} viewport={{ once: true, margin: '-80px' }}>
-          <ImageSlot slotName="FOUNDER-PORTRAIT" alt="Portrait of Mr. Matthew Awoyale" aspect="4 / 5" />
+          <ImageSlot src={founderPortrait} slotName="FOUNDER-PORTRAIT" alt="Mr. Matthew Awoyale, Founder of Dream Chasers Academy" aspect="4 / 5" />
         </motion.div>
-        <motion.div className="founder-detail__copy" variants={reduceMotion ? undefined : fadeUp} initial={reduceMotion ? false : 'hidden'} whileInView={reduceMotion ? undefined : 'visible'} viewport={{ once: true, margin: '-80px' }}>
-          <span className="section-kicker">The Person Behind the Vision</span>
-          <h2>Meet the Founder</h2>
+        <motion.div className="founder-detail__copy" variants={reduceMotion ? undefined : fadeUpBlur} initial={reduceMotion ? false : 'hidden'} whileInView={reduceMotion ? undefined : 'visible'} viewport={{ once: true, margin: '-80px' }}>
+          <span className="section-kicker">Meet the Founder</span>
+          <h2>Mr. Matthew Awoyale</h2>
+          <p className="founder-detail__role">Founder, Dream Chasers Academy</p>
+          <blockquote className="founder-detail__quote">“committed to building a generation of purposeful, skilled, innovative, and impact-driven young people”</blockquote>
           <p>Mr. Matthew Awoyale is a purpose-driven entrepreneur, mentor, and personal development advocate passionate about helping people discover their God-given gifts, maximize their potential, and fulfil their purpose. Driven by a strong belief that every individual has unique abilities and the capacity to create meaningful impact, he founded the Academy to provide young people with the knowledge, skills, clarity, and practical exposure needed to develop their potential and achieve meaningful success. His work focuses on the intersection of purpose, personal development, entrepreneurship, leadership, and human potential, with a particular passion for helping young people transform their gifts into value and their aspirations into tangible results.</p>
-          <p className="founder-detail__name">Mr. Matthew Awoyale <span>Founder, Dream Chasers Academy</span></p>
         </motion.div>
       </section>
 

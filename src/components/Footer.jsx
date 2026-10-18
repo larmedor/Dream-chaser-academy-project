@@ -1,13 +1,14 @@
 import { useState } from 'react'
-import { Globe, MessageCircle, Radio, Video } from 'lucide-react'
+import { Globe, MessageCircle, Radio } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { footerProgrammeLinks, navLinks, resourceLinks } from '../data/navLinks'
+import YoutubeIcon from './YoutubeIcon'
 
 const socialLinks = [
-  { label: 'Instagram', Icon: Radio },
-  { label: 'Facebook', Icon: MessageCircle },
-  { label: 'YouTube', Icon: Video },
-  { label: 'LinkedIn', Icon: Globe },
+  { label: 'Instagram', Icon: Radio, href: '#' },
+  { label: 'Facebook', Icon: MessageCircle, href: '#' },
+  { label: 'YouTube', Icon: YoutubeIcon, href: 'https://www.youtube.com/@awoyalematthewdreamchaserb1961', external: true },
+  { label: 'LinkedIn', Icon: Globe, href: '#' },
 ]
 
 function Footer() {
@@ -26,8 +27,8 @@ function Footer() {
           <Link className="site-footer__brand" to="/">Dream Chasers Academy</Link>
           <p>A personal development and entrepreneurship academy dedicated to helping young people discover their God-given gifts, develop their potential, pursue their purpose, and turn their abilities into meaningful success.</p>
           <div className="site-footer__socials" aria-label="Social media">
-            {socialLinks.map(({ label, Icon }) => (
-              <a href="#" key={label} aria-label={label}><Icon size={18} strokeWidth={1.5} /></a>
+            {socialLinks.map(({ label, Icon, href, external }) => (
+              <a href={href} key={label} aria-label={label} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}><Icon size={18} strokeWidth={1.5} /></a>
             ))}
           </div>
         </div>
@@ -51,6 +52,13 @@ function Footer() {
             </form>
             {subscribed && <p className="site-footer__success" role="status">Thank you for subscribing.</p>}
           </div>
+        </div>
+        <div className="site-footer__link-column">
+          <h2>Contact</h2>
+          <a href="mailto:dreamchaserbrand3@gmail.com">dreamchaserbrand3@gmail.com</a>
+          <a href="tel:08145753529">0814 575 3529</a>
+          <a href="tel:09072313740">0907 231 3740</a>
+          <span>Shop 1, Adeniji Adele Road, Dolphin Estate Phase 4</span>
         </div>
       </div>
       <div className="site-footer__bottom">

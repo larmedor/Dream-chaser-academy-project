@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Headphones, ArrowUpRight } from 'lucide-react'
 import { fadeUp, scaleIn, staggerContainer, staggerItem } from '../animations/variants'
+import podcastCover from '../assets/images/mattew Awoyale podcast.jpg'
 import ImageSlot from '../components/ImageSlot'
 import { articleCategories } from '../data/articles'
 
@@ -40,7 +41,7 @@ function ResourcesPage() {
 
       <section className="inner-section featured-podcast">
         <motion.div className="featured-podcast__cover" variants={reduceMotion ? undefined : scaleIn} initial={reduceMotion ? false : 'hidden'} whileInView={reduceMotion ? undefined : 'visible'} viewport={{ once: true, margin: '-80px' }}>
-          <ImageSlot slotName="PODCAST-COVER" alt="The Matthew Awoyale Podcast cover placeholder" aspect="1 / 1" />
+          <ImageSlot src={podcastCover} slotName="PODCAST-COVER" alt="The Matthew Awoyale Podcast cover about discovering and maximizing your gifts" aspect="1 / 1" />
           <span className="featured-podcast__cover-title">The Matthew<br />Awoyale Podcast</span>
         </motion.div>
         <motion.div className="featured-podcast__copy" variants={reduceMotion ? undefined : fadeUp} initial={reduceMotion ? false : 'hidden'} whileInView={reduceMotion ? undefined : 'visible'} viewport={{ once: true, margin: '-80px' }}>

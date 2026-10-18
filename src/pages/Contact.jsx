@@ -1,17 +1,18 @@
 import { useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
-import { Mail, MapPin, Phone, Share2 } from 'lucide-react'
+import { Mail, MapPin, Phone } from 'lucide-react'
 import { fadeUp } from '../animations/variants'
 import CTABand from '../components/CTABand'
 import FAQAccordion from '../components/FAQAccordion'
 import SectionHeading from '../components/SectionHeading'
+import YoutubeIcon from '../components/YoutubeIcon'
 import { faqs } from '../data/faqs'
 
 const contactDetails = [
-  { label: 'Phone', value: '[TO BE PROVIDED]', Icon: Phone },
-  { label: 'Email', value: '[TO BE PROVIDED]', Icon: Mail },
-  { label: 'Address', value: '[TO BE PROVIDED]', Icon: MapPin },
-  { label: 'Social Media', value: '[TO BE PROVIDED]', Icon: Share2 },
+  { label: 'Phone', Icon: Phone, values: [{ text: '0814 575 3529', href: 'tel:08145753529' }, { text: '0907 231 3740', href: 'tel:09072313740' }] },
+  { label: 'Email', Icon: Mail, values: [{ text: 'dreamchaserbrand3@gmail.com', href: 'mailto:dreamchaserbrand3@gmail.com' }] },
+  { label: 'Address', Icon: MapPin, values: [{ text: 'Shop 1, Adeniji Adele Road, Dolphin Estate Phase 4' }] },
+  { label: 'YouTube', Icon: YoutubeIcon, values: [{ text: '@awoyalematthewdreamchaserb1961', href: 'https://www.youtube.com/@awoyalematthewdreamchaserb1961' }] },
 ]
 
 function ContactPage() {
@@ -38,10 +39,12 @@ function ContactPage() {
           <span className="section-kicker">We'd Love to Hear from You</span>
           <h2>Let's connect.</h2>
           <div className="contact-details__list">
-            {contactDetails.map(({ label, value, Icon }) => (
+            {contactDetails.map(({ label, values, Icon }) => (
               <div className="contact-detail" key={label}>
                 <span className="contact-detail__icon"><Icon size={19} strokeWidth={1.5} aria-hidden="true" /></span>
-                <span><strong>{label}</strong><span>{value}</span></span>
+                <span><strong>{label}</strong>{values.map(({ text, href }) => (
+                  <span key={text}>{href ? <a href={href}>{text}</a> : text}</span>
+                ))}</span>
               </div>
             ))}
           </div>
