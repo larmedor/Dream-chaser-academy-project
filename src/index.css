@@ -3,19 +3,20 @@
 @theme {
 	--font-serif: "Playfair Display", Georgia, serif;
 	--font-sans: "Inter", system-ui, sans-serif;
-	--color-ink: #000000;
-	--color-coal: #0A0A0A;
-	--color-smoke: #1A1A1A;
-	--color-fog: #555555;
-	--color-mist: #888888;
-	--color-line: #CCCCCC;
-	--color-bone: #F5F5F5;
-	--color-paper: #FAFAFA;
+	--color-navy: #1E3A8A;
+	--color-brand: #2563EB;
+	--color-brand-dark: #1D4ED8;
+	--color-blue-soft: #EFF6FF;
+	--color-blue-border: #DBEAFE;
+	--color-white: #FFFFFF;
+	--color-cloud: #F8FAFC;
+	--color-slate: #1E293B;
+	--color-slate-muted: #64748B;
 }
 
 :root {
 	font-family: var(--font-sans);
-	color: var(--color-ink);
+	color: var(--color-slate);
 	background: #FFFFFF;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -58,13 +59,13 @@ textarea {
 }
 
 :focus-visible {
-	outline: 2px solid #000000;
+	outline: 2px solid #2563EB;
 	outline-offset: 3px;
 }
 
 ::selection {
 	color: #FFFFFF;
-	background: #000000;
+	background: #2563EB;
 }
 
 @media (prefers-reduced-motion: reduce) {
