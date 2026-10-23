@@ -9,7 +9,7 @@ import YoutubeIcon from '../components/YoutubeIcon'
 import { faqs } from '../data/faqs'
 
 const contactDetails = [
-  { label: 'Phone', Icon: Phone, values: [{ text: '0814 575 3529', href: 'tel:08145753529' }, { text: '0907 231 3740', href: 'tel:09072313740' }] },
+  { label: 'Phone', Icon: Phone, values: [{ text: '0814 575 3529', href: 'tel:08145753529' }, { text: '09072982970', href: 'tel:09072982970' }] },
   { label: 'Email', Icon: Mail, values: [{ text: 'dreamchaserbrand3@gmail.com', href: 'mailto:dreamchaserbrand3@gmail.com' }] },
   { label: 'Address', Icon: MapPin, values: [{ text: 'Shop 1, Adeniji Adele Road, Dolphin Estate Phase 4' }] },
   { label: 'YouTube', Icon: YoutubeIcon, values: [{ text: '@awoyalematthewdreamchaserb1961', href: 'https://www.youtube.com/@awoyalematthewdreamchaserb1961' }] },

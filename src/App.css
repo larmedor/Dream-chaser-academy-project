@@ -934,7 +934,7 @@
 }
 
 .home-hero__image .image-slot__placeholder span {
-  opacity: 0.35;
+  display: none;
 }
 
 .home-hero__overlay {

@@ -57,7 +57,7 @@ function Footer() {
           <h2>Contact</h2>
           <a href="mailto:dreamchaserbrand3@gmail.com">dreamchaserbrand3@gmail.com</a>
           <a href="tel:08145753529">0814 575 3529</a>
-          <a href="tel:09072313740">0907 231 3740</a>
+          <a href="tel:09072982970">09072982970</a>
           <span>Shop 1, Adeniji Adele Road, Dolphin Estate Phase 4</span>
         </div>
       </div>
