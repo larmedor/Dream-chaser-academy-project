@@ -65,10 +65,10 @@ function ContactPage() {
               </div>
               <div className="contact-form__row">
                 <label>Phone<input name="phone" type="tel" autoComplete="tel" /></label>
-                <label>Subject
+                <label>Programme
                   <select name="subject" defaultValue="" required>
-                    <option value="" disabled>Select a subject</option>
-                    <option>Programmes</option><option>Training</option><option>Partnership</option><option>Community Voice</option><option>General</option>
+                    <option value="" disabled>Select a programme</option>
+                    <option>Entrepreneurs Round Table</option><option>Holystick Moment of Truth with CEO</option><option>The Recharge Conference</option><option>So You Want to Start a Business?</option><option>The Matthew Awoyale Podcast</option><option>Community Voice</option><option>General Enquiry</option>
                   </select>
                 </label>
               </div>
