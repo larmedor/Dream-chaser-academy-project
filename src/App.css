@@ -1717,7 +1717,22 @@
 
 .training-hero {
   min-height: 32rem;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.training-hero__image-wrap {
+  display: flex;
+  width: min(100%, 30rem);
+  justify-self: end;
+}
+
+.training-hero__image-wrap .image-slot {
+  width: 100%;
+  max-height: 29rem;
+  border: 1px solid rgba(219, 234, 254, 0.35);
+  border-radius: 1.2rem;
+  overflow: hidden;
 }
 
 .training-hero .inner-hero__copy > p {
