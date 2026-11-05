@@ -21,8 +21,29 @@ function ContactPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const name = (formData.get('name') || '').toString().trim()
+    const email = (formData.get('email') || '').toString().trim()
+    const phone = (formData.get('phone') || '').toString().trim()
+    const subject = (formData.get('subject') || '').toString().trim()
+    const message = (formData.get('message') || '').toString().trim()
+
+    const mailtoBody = [
+      'Name: ' + name,
+      'Email: ' + email,
+      'Phone: ' + phone,
+      '',
+      'Message:',
+      message,
+    ].join('\n')
+
+    const mailtoLink = `mailto:dreamchaserbrand3@gmail.com?subject=${encodeURIComponent(`New enquiry: ${subject}`)}&body=${encodeURIComponent(mailtoBody)}`
+
+    window.location.href = mailtoLink
     setSubmitted(true)
-    event.currentTarget.reset()
+    form.reset()
   }
 
   return (

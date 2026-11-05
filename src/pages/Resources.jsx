@@ -65,8 +65,14 @@ function NewsletterForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+
+    const form = event.currentTarget
+    const email = (new FormData(form).get('email') || '').toString().trim()
+    const mailtoLink = `mailto:dreamchaserbrand3@gmail.com?subject=${encodeURIComponent('New newsletter subscription')}&body=${encodeURIComponent(`Subscriber email: ${email}`)}`
+
+    window.location.href = mailtoLink
     setSubscribed(true)
-    event.currentTarget.reset()
+    form.reset()
   }
 
   return (

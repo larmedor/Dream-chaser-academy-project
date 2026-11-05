@@ -3,6 +3,7 @@ import { ArrowDown, ArrowRight, ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { easeOutQuint, fadeUp, fadeUpBlur, lineReveal, scaleIn, staggerContainer } from '../animations/variants'
+import homeHeroImage from '../assets/images/Home hero page.png'
 import founderPortrait from '../assets/images/Founder Awoyale Mattew.jpg'
 import CTABand from '../components/CTABand'
 import ImageSlot from '../components/ImageSlot'
@@ -37,7 +38,7 @@ function HomeHero() {
           animate={{ scale: shouldReduceMotion ? 1 : 1.08 }}
           transition={{ duration: shouldReduceMotion ? 0 : 12, ease: 'linear' }}
         >
-          <ImageSlot src="" alt="Dream Chasers Academy homepage hero" slotName="HOME-HERO" aspect="auto" className="home-hero__image" />
+          <ImageSlot src={homeHeroImage} alt="Dream Chasers Academy homepage hero" slotName="HOME-HERO" aspect="auto" className="home-hero__image" />
         </motion.div>
       </motion.div>
       <div className="home-hero__overlay" />

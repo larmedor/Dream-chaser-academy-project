@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { fadeUp, fadeUpBlur, scaleIn, staggerContainer, staggerItem } from '../animations/variants'
+import aboutHeroImage from '../assets/images/about page hero.png'
 import founderPortrait from '../assets/images/Founder Awoyale Mattew.jpg'
 import CTABand from '../components/CTABand'
 import ImageSlot from '../components/ImageSlot'
@@ -27,7 +28,7 @@ function AboutPage() {
           <p>We exist to help young people discover who they are, develop what they carry, and pursue the purpose they were made for.</p>
         </div>
         <motion.div className="inner-hero__image" variants={reduceMotion ? undefined : scaleIn} initial={reduceMotion ? false : 'hidden'} animate={reduceMotion ? undefined : 'visible'}>
-          <ImageSlot slotName="ABOUT-HERO" alt="Dream Chasers Academy community" aspect="4 / 3" />
+          <ImageSlot src={aboutHeroImage} slotName="ABOUT-HERO" alt="Dream Chasers Academy community" aspect="4 / 3" />
         </motion.div>
       </section>
 
