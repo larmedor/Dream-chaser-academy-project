@@ -103,7 +103,14 @@ function ProgrammesPage() {
                 </div>
               )}
               {programme.link.startsWith('http') ? (
-                <a className="text-link" href={programme.link} target="_blank" rel="noreferrer">{programme.button}<ArrowUpRight size={16} /></a>
+                <a
+                  className={programme.button === 'Listen to the Podcast' ? 'button-link' : 'text-link'}
+                  href={programme.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {programme.button}<ArrowUpRight size={16} />
+                </a>
               ) : programme.link === '#' ? (
                 <a className="text-link" href="#">{programme.button}<ArrowUpRight size={16} /></a>
               ) : (
