@@ -7,6 +7,8 @@ import podcastCover from '../assets/images/mattew Awoyale podcast.jpg'
 import ImageSlot from '../components/ImageSlot'
 import { articleCategories } from '../data/articles'
 
+const podcastSpotifyLink = 'https://open.spotify.com/playlist/3I2sNzaVwKtaYclv2LGEwu?si=3pNM825IQ0OINWcbZu9dxQ&utm_source=native-share-menu&pi=if36pVJOSkyD9'
+
 function ResourcesPage() {
   const reduceMotion = useReducedMotion()
   return (
@@ -49,8 +51,8 @@ function ResourcesPage() {
           <span className="section-kicker">Featured Conversation</span>
           <h2>Discover. Develop. Maximize.</h2>
           <p>A platform focused on helping people discover and maximize their God-given gifts. Through conversations and insights around purpose, personal development, entrepreneurship, and potential, the podcast encourages listeners to gain clarity about who they are and what they can become.</p>
-          <div className="audio-placeholder"><span className="audio-placeholder__icon"><Headphones size={20} /></span><span className="audio-placeholder__track"><strong>[Podcast episode to be provided.]</strong><span>Audio player placeholder</span></span><span className="audio-placeholder__duration">00:00</span></div>
-          <a className="button-link" href="#">Listen Now <ArrowUpRight size={16} /></a>
+          <div className="audio-placeholder"><span className="audio-placeholder__icon"><Headphones size={20} /></span><span className="audio-placeholder__track"><strong>Listen on Spotify</strong><span>Podcast playlist</span></span><span className="audio-placeholder__duration">Play</span></div>
+          <a className="button-link" href={podcastSpotifyLink} target="_blank" rel="noreferrer">Listen Now <ArrowUpRight size={16} /></a>
         </motion.div>
       </section>
 

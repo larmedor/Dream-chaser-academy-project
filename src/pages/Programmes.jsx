@@ -10,6 +10,8 @@ import podcastCover from '../assets/images/mattew Awoyale podcast.jpg'
 import CTABand from '../components/CTABand'
 import ImageSlot from '../components/ImageSlot'
 
+const podcastSpotifyLink = 'https://open.spotify.com/playlist/3I2sNzaVwKtaYclv2LGEwu?si=3pNM825IQ0OINWcbZu9dxQ&utm_source=native-share-menu&pi=if36pVJOSkyD9'
+
 const programmeDetails = [
   {
     name: 'ENTREPRENEURS ROUND TABLE',
@@ -60,7 +62,7 @@ const programmeDetails = [
     imageAlt: 'The Matthew Awoyale Podcast cover',
     body: 'A platform focused on helping people discover and maximize their God-given gifts. Through conversations and insights around purpose, personal development, entrepreneurship, and potential, the podcast encourages listeners to gain clarity about who they are and what they can become.',
     button: 'Listen to the Podcast',
-    link: '#',
+    link: podcastSpotifyLink,
     podcast: true,
   },
 ]
@@ -100,7 +102,13 @@ function ProgrammesPage() {
                   <span className="audio-placeholder__duration">00:00</span>
                 </div>
               )}
-              {programme.link === '#' ? <a className="text-link" href="#">{programme.button}<ArrowUpRight size={16} /></a> : <Link className="text-link" to={programme.link}>{programme.button}<ArrowUpRight size={16} /></Link>}
+              {programme.link.startsWith('http') ? (
+                <a className="text-link" href={programme.link} target="_blank" rel="noreferrer">{programme.button}<ArrowUpRight size={16} /></a>
+              ) : programme.link === '#' ? (
+                <a className="text-link" href="#">{programme.button}<ArrowUpRight size={16} /></a>
+              ) : (
+                <Link className="text-link" to={programme.link}>{programme.button}<ArrowUpRight size={16} /></Link>
+              )}
             </motion.div>
           </div>
         </section>
