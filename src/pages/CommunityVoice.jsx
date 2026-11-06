@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowUpRight, HeartHandshake, HandHeart, UsersRound } from 'lucide-react'
 import { fadeUp, staggerContainer, staggerItem } from '../animations/variants'
+import communityHeroImage from '../assets/images/Community voice hero.png'
+import communityStoryImage from '../assets/images/community storycards.png'
 import CTABand from '../components/CTABand'
 import ImageSlot from '../components/ImageSlot'
 import SectionHeading from '../components/SectionHeading'
@@ -25,7 +27,7 @@ function CommunityVoicePage() {
           <h1>Giving Back.<br />Creating Impact.</h1>
           <p>When a community grows together, every person has the opportunity to move forward.</p>
         </div>
-        <div className="inner-hero__image"><ImageSlot slotName="COMMUNITY-HERO" alt="Community Voice initiative" aspect="4 / 3" /></div>
+        <div className="inner-hero__image"><ImageSlot src={communityHeroImage} slotName="COMMUNITY-HERO" alt="Community Voice initiative" aspect="4 / 3" /></div>
       </section>
 
       <section className="inner-section community-about">
@@ -41,7 +43,7 @@ function CommunityVoicePage() {
         <motion.div className="community-stories__grid" variants={reduceMotion ? undefined : staggerContainer} initial={reduceMotion ? false : 'hidden'} whileInView={reduceMotion ? undefined : 'visible'} viewport={{ once: true, margin: '-80px' }}>
           {communityStories.map((story, index) => (
             <motion.article className="community-story-card" key={index} variants={reduceMotion ? undefined : staggerItem}>
-              <ImageSlot slotName={`COMMUNITY-STORY-0${index + 1}`} alt="Community Voice story image placeholder" aspect="4 / 3" />
+              <ImageSlot src={communityStoryImage} slotName={`COMMUNITY-STORY-0${index + 1}`} alt="Community Voice story image" aspect="4 / 3" />
               <span className="section-kicker">A Community Voice Story</span>
               <h3>{story.title}</h3>
               <p>{story.body}</p>

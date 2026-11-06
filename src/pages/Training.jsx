@@ -1,7 +1,9 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
 import { fadeUp, staggerContainer, staggerItem } from '../animations/variants'
+import trainingHeroImage from '../assets/images/Training Academy Hero.png'
 import CTABand from '../components/CTABand'
+import ImageSlot from '../components/ImageSlot'
 import { trainingModules } from '../data/modules'
 
 function TrainingPage() {
@@ -15,7 +17,9 @@ function TrainingPage() {
           <h1>The Training Academy</h1>
           <p>Our training curriculum cuts across multiple disciplines and focuses on the development of the mindset, skills, abilities, and character required for purposeful personal and professional growth.</p>
         </div>
-        <div className="training-hero__stamp" aria-hidden="true"><span>Learn</span><span>Apply</span><span>Grow</span></div>
+        <div className="training-hero__image-wrap">
+          <ImageSlot src={trainingHeroImage} slotName="TRAINING-HERO" alt="Dream Chasers Academy training academy hero" aspect="4 / 3" />
+        </div>
       </section>
 
       <section className="training-format">

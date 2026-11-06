@@ -184,7 +184,6 @@ function HomePage() {
           <div className="stats-grid">
             {impactStats.map((stat) => <StatCounter key={stat.label} {...stat} />)}
           </div>
-          <p className="stats-section__note">Figures to be confirmed by the organization.</p>
         </div>
       </section>
 

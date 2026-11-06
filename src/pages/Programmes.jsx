@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowUpRight, Headphones } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { fadeUp, scaleIn } from '../animations/variants'
+import programmesHeroImage from '../assets/images/programme page Hero.png'
 import rechargeConference from '../assets/images/Recharge Conference.jpg'
 import holystickMoment from '../assets/images/Holystick moment of truth.jpg'
 import startBusiness from '../assets/images/So you want to starta business .jpg'
@@ -76,7 +77,7 @@ function ProgrammesPage() {
           <p>Explore learning experiences created to help you discover your gifts, build your capacity, and move forward with purpose.</p>
         </div>
         <motion.div className="inner-hero__image" variants={reduceMotion ? undefined : scaleIn} initial={reduceMotion ? false : 'hidden'} animate={reduceMotion ? undefined : 'visible'}>
-          <ImageSlot slotName="PROGRAMMES-HERO" alt="Dream Chasers Academy programmes" aspect="4 / 3" />
+          <ImageSlot src={programmesHeroImage} slotName="PROGRAMMES-HERO" alt="Dream Chasers Academy programmes" aspect="4 / 3" />
         </motion.div>
       </section>
 

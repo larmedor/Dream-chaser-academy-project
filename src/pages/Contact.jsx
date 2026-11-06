@@ -42,6 +42,7 @@ function ContactPage() {
     const mailtoLink = `mailto:dreamchaserbrand3@gmail.com?subject=${encodeURIComponent(`New enquiry: ${subject}`)}&body=${encodeURIComponent(mailtoBody)}`
 
     window.location.href = mailtoLink
+    window.alert('Your enquiry has been sent. We will get back to you shortly.')
     setSubmitted(true)
     form.reset()
   }

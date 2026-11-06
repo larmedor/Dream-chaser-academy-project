@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Headphones, ArrowUpRight } from 'lucide-react'
 import { fadeUp, scaleIn, staggerContainer, staggerItem } from '../animations/variants'
+import articleThumbnail from '../assets/images/Article thumbnail.png'
 import podcastCover from '../assets/images/mattew Awoyale podcast.jpg'
 import ImageSlot from '../components/ImageSlot'
 import { articleCategories } from '../data/articles'
@@ -27,7 +28,7 @@ function ResourcesPage() {
               const articleNumber = groupIndex * 2 + articleIndex + 1
               return (
                 <motion.article className="article-card" key={article.title} variants={reduceMotion ? undefined : staggerItem}>
-                  <ImageSlot slotName={`ARTICLE-THUMBNAIL-0${articleNumber}`} alt={`${article.title} article thumbnail`} aspect="16 / 10" />
+                  <ImageSlot src={articleThumbnail} slotName={`ARTICLE-THUMBNAIL-0${articleNumber}`} alt={`${article.title} article thumbnail`} aspect="16 / 10" />
                   <span className="article-card__category">{group.category}</span>
                   <h3>{article.title}</h3>
                   <p>{article.excerpt}</p>
@@ -71,6 +72,7 @@ function NewsletterForm() {
     const mailtoLink = `mailto:dreamchaserbrand3@gmail.com?subject=${encodeURIComponent('New newsletter subscription')}&body=${encodeURIComponent(`Subscriber email: ${email}`)}`
 
     window.location.href = mailtoLink
+    window.alert('We will be in touch soon.')
     setSubscribed(true)
     form.reset()
   }

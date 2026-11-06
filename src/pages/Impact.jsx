@@ -1,5 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { scaleIn, staggerContainer, staggerItem } from '../animations/variants'
+import impactHeroImage from '../assets/images/Impact page hero.png'
 import CTABand from '../components/CTABand'
 import ImageSlot from '../components/ImageSlot'
 import SectionHeading from '../components/SectionHeading'
@@ -21,7 +22,7 @@ function ImpactPage() {
           <p>Our work is centred on helping people move from potential to purpose, and from purpose to meaningful action. Through our training programmes, entrepreneurship initiatives, conferences, digital platforms, podcast, and community projects, we create opportunities for young people to learn, develop, connect, and grow.</p>
         </div>
         <motion.div className="inner-hero__image" variants={reduceMotion ? undefined : scaleIn} initial={reduceMotion ? false : 'hidden'} animate={reduceMotion ? undefined : 'visible'}>
-          <ImageSlot slotName="IMPACT-HERO" alt="Dream Chasers Academy community impact" aspect="4 / 3" />
+          <ImageSlot src={impactHeroImage} slotName="IMPACT-HERO" alt="Dream Chasers Academy community impact" aspect="4 / 3" />
         </motion.div>
       </section>
 
@@ -32,7 +33,7 @@ function ImpactPage() {
       </div>
 
       <section className="inner-section impact-stats-section">
-        <SectionHeading eyebrow="The Journey in Numbers" title="Progress with purpose." description="Every number represents a possibility awakened. Figures to be confirmed by the organization." />
+        <SectionHeading eyebrow="The Journey in Numbers" title="Progress with purpose." description="Every number represents a possibility awakened." />
         <div className="impact-stats-grid">{impactStats.map((stat) => <StatCounter key={stat.label} {...stat} />)}</div>
       </section>
 
